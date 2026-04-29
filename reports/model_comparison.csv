@@ -1,0 +1,5 @@
+Model,MAE (days),RMSE (days),R²,Clinical Acc (±2d) %
+XGBoost,0.77,1.34,0.6628,93.5
+Gradient Boosting,0.77,1.34,0.6644,93.6
+Random Forest,0.96,1.46,0.6036,91.4
+Ridge Regression,1.22,1.69,0.4675,88.6
