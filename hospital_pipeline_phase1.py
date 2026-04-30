@@ -426,6 +426,16 @@ def predict_single_patient(pipeline, patient_dict: dict) -> dict:
     """
     df_input = pd.DataFrame([patient_dict])
 
+    # If no admission date provided (e.g. live API call), inject today's date.
+    # engineer_features needs vdate to create day-of-week / season features —
+    # without it those columns are missing and the trained pipeline will crash.
+    if "vdate" not in df_input.columns or df_input["vdate"].isna().all():
+        df_input["vdate"] = pd.Timestamp.today().normalize()
+
+    # discharged is only known at discharge — not at admission prediction time.
+    # Drop it so engineer_features doesn't try to parse it.
+    df_input.drop(columns=["discharged"], inplace=True, errors="ignore")
+
     # Run through same feature engineering
     df_input = engineer_features(df_input)
 
