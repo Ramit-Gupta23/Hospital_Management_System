@@ -1,0 +1,4 @@
+2026-04-30 05:31:43,650 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-04-30 05:33:46,108 | INFO | {"request_id": "5046bf9e", "predicted_los_days": 5.2, "comorbidity_score": 0, "facid": 3, "timestamp": "2026-04-30T00:03:46.107264"}
+2026-04-30 05:34:28,898 | INFO | {"request_id": "327a9cba", "predicted_los_days": 8.5, "comorbidity_score": 1, "facid": 3, "timestamp": "2026-04-30T00:04:28.898854"}
+2026-04-30 05:35:31,086 | INFO | {"request_id": "1db96a32", "predicted_los_days": 8.9, "comorbidity_score": 2, "facid": 3, "timestamp": "2026-04-30T00:05:31.086784"}
