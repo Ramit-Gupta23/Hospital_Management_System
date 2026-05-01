@@ -3,3 +3,35 @@
 2026-04-30 05:34:28,898 | INFO | {"request_id": "327a9cba", "predicted_los_days": 8.5, "comorbidity_score": 1, "facid": 3, "timestamp": "2026-04-30T00:04:28.898854"}
 2026-04-30 05:35:31,086 | INFO | {"request_id": "1db96a32", "predicted_los_days": 8.9, "comorbidity_score": 2, "facid": 3, "timestamp": "2026-04-30T00:05:31.086784"}
 2026-05-01 09:41:39,113 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-01 09:43:50,914 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-01 09:45:10,935 | INFO | {"request_id": "4a8ea20b", "predicted_los_days": 10.8, "comorbidity_score": 3, "facid": 3, "timestamp": "2026-05-01T04:15:10.935824"}
+2026-05-01 09:46:04,891 | INFO | {"request_id": "6cd24f57", "predicted_los_days": 7.2, "comorbidity_score": 0, "facid": 3, "timestamp": "2026-05-01T04:16:04.891762"}
+2026-05-01 09:46:38,609 | INFO | {"request_id": "4bbf8a8a", "predicted_los_days": 11.1, "comorbidity_score": 0, "facid": 3, "timestamp": "2026-05-01T04:16:38.609948"}
+2026-05-01 09:46:54,115 | INFO | {"request_id": "8091f4a2", "predicted_los_days": 11.1, "comorbidity_score": 0, "facid": 0, "timestamp": "2026-05-01T04:16:54.115773"}
+2026-05-01 09:46:58,616 | INFO | {"request_id": "96dd6abe", "predicted_los_days": 11.1, "comorbidity_score": 0, "facid": 0, "timestamp": "2026-05-01T04:16:58.616052"}
+2026-05-01 09:47:21,942 | INFO | {"request_id": "a0e27e12", "predicted_los_days": 11.1, "comorbidity_score": 0, "facid": 0, "timestamp": "2026-05-01T04:17:21.942912"}
+2026-05-01 09:47:41,131 | INFO | {"request_id": "05d92af6", "predicted_los_days": 11.1, "comorbidity_score": 0, "facid": 0, "timestamp": "2026-05-01T04:17:41.131159"}
+2026-05-01 09:47:52,976 | INFO | {"request_id": "e40f758e", "predicted_los_days": 10.7, "comorbidity_score": 0, "facid": 0, "timestamp": "2026-05-01T04:17:52.976774"}
+2026-05-01 09:48:26,129 | INFO | {"request_id": "78085a01", "predicted_los_days": 11.1, "comorbidity_score": 0, "facid": 0, "timestamp": "2026-05-01T04:18:26.128167"}
+2026-05-01 09:51:51,508 | INFO | {"request_id": "f2ae9874", "predicted_los_days": 10.5, "comorbidity_score": 0, "facid": 0, "timestamp": "2026-05-01T04:21:51.508296"}
+2026-05-01 09:52:08,089 | INFO | {"request_id": "70a49844", "predicted_los_days": 9.3, "comorbidity_score": 0, "facid": 0, "timestamp": "2026-05-01T04:22:08.089722"}
+2026-05-01 09:52:29,976 | INFO | {"request_id": "e3247c8f", "predicted_los_days": 4.8, "comorbidity_score": 0, "facid": 3, "timestamp": "2026-05-01T04:22:29.976209"}
+2026-05-01 09:53:07,110 | INFO | {"request_id": "e9e3a211", "predicted_los_days": 4.8, "comorbidity_score": 0, "facid": 3, "timestamp": "2026-05-01T04:23:07.110325"}
+2026-05-01 09:53:48,406 | INFO | {"request_id": "a683147b", "predicted_los_days": 4.8, "comorbidity_score": 0, "facid": 3, "timestamp": "2026-05-01T04:23:48.406287"}
+2026-05-01 09:59:15,066 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-01 09:59:46,618 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-01 09:59:50,463 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-01 10:02:43,060 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-01 10:02:46,788 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-01 10:02:57,512 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-01 10:03:01,573 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-01 10:04:51,375 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-01 10:04:54,356 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-01 10:05:49,814 | INFO | {"request_id": "8933c318", "predicted_los_days": 6.4, "comorbidity_score": 2, "facid": 3, "timestamp": "2026-05-01T04:35:49.814348"}
+2026-05-01 10:05:59,674 | INFO | {"request_id": "72f5753b", "predicted_los_days": 6.1, "comorbidity_score": 2, "facid": 3, "timestamp": "2026-05-01T04:35:59.674247"}
+2026-05-01 10:06:53,775 | INFO | {"request_id": "def22b31", "predicted_los_days": 7.7, "comorbidity_score": 6, "facid": 3, "timestamp": "2026-05-01T04:36:53.775292"}
+2026-05-01 10:07:04,883 | INFO | {"request_id": "cac90dcb", "predicted_los_days": 7.6, "comorbidity_score": 6, "facid": 3, "timestamp": "2026-05-01T04:37:04.883738"}
+2026-05-01 10:07:21,242 | INFO | {"request_id": "855a8508", "predicted_los_days": 8.8, "comorbidity_score": 6, "facid": 3, "timestamp": "2026-05-01T04:37:21.241129"}
+2026-05-01 10:14:55,869 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-01 10:14:59,586 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-01 10:18:47,234 | INFO | Model loaded: models\best_model_XGBoost.joblib
