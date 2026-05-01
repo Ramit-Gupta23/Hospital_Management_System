@@ -1,0 +1,26 @@
+# ============================================================
+#  Dockerfile.dashboard — Streamlit Dashboard
+# ============================================================
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir streamlit plotly
+
+# Copy only files needed for dashboard
+COPY dashboard.py .
+COPY hospital_pipeline_phase1.py .
+
+RUN mkdir -p data
+
+EXPOSE 8501
+
+# --server.address=0.0.0.0 makes it reachable outside the container
+CMD ["streamlit", "run", "dashboard.py", \
+     "--server.port=8501", \
+     "--server.address=0.0.0.0", \
+     "--server.headless=true", \
+     "--browser.gatherUsageStats=false"]

@@ -1,0 +1,61 @@
+# ============================================================
+#  docker-compose.yml — Hospital Management System
+#  Starts FastAPI + Streamlit together with one command
+#
+#  BUILD & RUN : docker-compose up --build
+#  STOP        : docker-compose down
+#  LOGS        : docker-compose logs -f
+#
+#  After running:
+#    FastAPI  → http://localhost:8000
+#    API Docs → http://localhost:8000/docs
+#    Dashboard→ http://localhost:8501
+# ============================================================
+
+version: "3.9"
+
+services:
+
+  # ── FastAPI Inference Server ──────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: hospital_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models        # model files persist outside container
+      - ./logs:/app/logs            # prediction logs persist outside container
+      - ./data:/app/data            # dataset accessible to api
+    environment:
+      - PYTHONUNBUFFERED=1
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    restart: unless-stopped
+
+  # ── Streamlit Dashboard ───────────────────────────────────
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    container_name: hospital_dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data            # same dataset mounted here too
+    environment:
+      - FASTAPI_URL=http://api:8000  # use Docker internal network name
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      api:
+        condition: service_healthy  # wait for API to be healthy before starting
+    restart: unless-stopped
+
+networks:
+  default:
+    name: hospital_network

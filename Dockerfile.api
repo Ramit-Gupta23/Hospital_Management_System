@@ -1,0 +1,24 @@
+# ============================================================
+#  Dockerfile.api — FastAPI Inference Server
+# ============================================================
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install curl for healthcheck
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy only files needed for API
+COPY app.py .
+COPY hospital_pipeline_phase1.py .
+
+# Runtime folders
+RUN mkdir -p logs models reports data
+
+EXPOSE 8000
+
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
