@@ -133,19 +133,27 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     # The number of pre-existing conditions is one
     # of the strongest predictors of long stays.
     condition_flags = [
-        "dialysisrenalendstage", "asthma", "irondef", "pneum",
-        "substancedependence", "psychologicaldisordermajor",
-        "depress", "psychother", "fibrosisandother",
-        "malnutrition", "hemo"
-    ]
+    "dialysisrenalendstage", "asthma", "irondef", "pneum",
+    "substancedependence", "psychologicaldisordermajor",
+    "depress", "psychother", "fibrosisandother",
+    "malnutrition", "hemo"]
+
     existing_flags = [c for c in condition_flags if c in df.columns]
 
-    # Flags come as "Yes"/"No" strings — convert to 0/1
     for col in existing_flags:
-        df[col] = (df[col].astype(str).str.strip().str.lower() == "yes").astype(int)
+        df[col] = df[col].astype(str).str.strip().str.lower()
+
+        df[col] = df[col].map({
+            "yes": 1, "1": 1, "true": 1,
+            "no": 0, "0": 0, "false": 0
+        })
+
+        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0).astype(int)
 
     df["comorbidity_score"] = df[existing_flags].sum(axis=1)
-    print(f"  comorbidity_score range : {df['comorbidity_score'].min()}–{df['comorbidity_score'].max()}")
+
+    print(df[existing_flags].sum())  # total 1s per column
+    print(f"range: {df['comorbidity_score'].min()}–{df['comorbidity_score'].max()}")
 
     # ── 3c. LAB VALUE INTERACTIONS ───────────────
     # Abnormal lab combos are clinically meaningful

@@ -9,7 +9,7 @@ uvicorn[standard]==0.29.0
 pydantic==2.7.1
 
 # ML
-scikit-learn==1.4.2
+scikit-learn==1.8.0
 xgboost==2.0.3
 shap==0.45.0
 joblib==1.4.0
