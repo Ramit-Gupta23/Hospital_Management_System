@@ -37,3 +37,9 @@
 2026-05-01 10:18:47,234 | INFO | Model loaded: models\best_model_XGBoost.joblib
 2026-05-01 10:18:50,246 | INFO | Model loaded: models\best_model_XGBoost.joblib
 2026-05-01 10:27:25,840 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-01 10:27:29,527 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-29 04:38:07,061 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-29 04:47:23,958 | INFO | Model loaded: models\best_model_XGBoost.joblib
+2026-05-29 04:49:09,948 | INFO | {"request_id": "6b6898f3", "predicted_los_days": 4.8, "comorbidity_score": 0, "facid": 3, "timestamp": "2026-05-28T23:19:09.948681"}
+2026-05-29 04:49:53,376 | INFO | {"request_id": "3ffa975e", "predicted_los_days": 4.8, "comorbidity_score": 0, "facid": 3, "timestamp": "2026-05-28T23:19:53.376674"}
+2026-05-29 04:50:43,531 | INFO | {"request_id": "7e431480", "predicted_los_days": 6.9, "comorbidity_score": 3, "facid": 3, "timestamp": "2026-05-28T23:20:43.531937"}
